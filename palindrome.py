@@ -1,18 +1,22 @@
 
 data = ["Schools", "Houses", "Apartments", "racecar"]
 
-def reverse(str):
-    return str[::-1]
 
-def isPalendrome(str):
-    rev = reverse(str)
-    return str == rev
+def reverse(s):
+    return s[::-1]
 
-def isPalendrome3(str):
+
+def is_palindrome(s):
+    rev = reverse(s)
+    return s == rev
+
+
+def is_palindrome3(s):
     # Run loop from 0 to len/2
-    for i in range(0, int(len(str)/2 + 1)):
-        if str[i] != str[len(str)-i-1]:
+    for i in range(0, int(len(s)/2 + 1)):
+        if s[i] != s[len(s)-i-1]:
             return False
     return True
 
-print(isPalendrome3(data[3]))
+
+print(is_palindrome3(data[3]))
