@@ -8,3 +8,5 @@ auth.set_access_token(os.environ.get("ACCESS_TOKEN"), os.environ.get("ACCESS_TOK
 
 # Create API object
 api = tweepy.API(auth)
+user = api.get_user("")
+print(user)

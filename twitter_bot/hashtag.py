@@ -3,16 +3,15 @@ import csv
 from twitter_bot import api
 
 
-# United Airlines
 # Open/Create a file to append data
-csvFile = open('ua.csv', 'a')
+csvFile = open('twitter_output.csv', 'a')
 
 
 # Use csv Writer
 csvWriter = csv.writer(csvFile)
 
 for tweet in tweepy.Cursor(api.search,
-                           "#covid19",
+                           "CNN",
                            100,
                            "en",
                            "2019-10-10").items():
